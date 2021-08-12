@@ -1,6 +1,7 @@
 .wrapper {
     width: 50%;
     margin: 0 auto;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 .sample-element {
@@ -28,6 +29,7 @@
 
 .description {
     margin-left:10px;
+    min-width: 300px;
 }
 
 #slider-row-first {
@@ -90,4 +92,13 @@
 
 .title {
     margin-top:0;
+    color: #134880;
+    font-weight: 700;
+    font-size: 32px;
+}
+
+.content {
+    font-weight: 400;
+    color: #484A4C;
+    font-size: 18px;
 }
