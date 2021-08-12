@@ -28,8 +28,9 @@
 }
 
 .description {
-    margin-left:10px;
     min-width: 300px;
+    background-color: white;
+    padding-left:20px;
 }
 
 #slider-row-first {
@@ -71,14 +72,20 @@
     margin-left: 5px;
     margin-right: 5px;
     border-radius: 5px;
+    position:relative;
+    z-index: -1;
 }
 
 .slider-row-second-container {
     display:flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 
+.slider-btn-group {
+    background-color: white;
+    padding-left:50px;
+}
 
 .slider-btn {
     width:60px;
