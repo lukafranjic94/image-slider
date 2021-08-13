@@ -15,7 +15,7 @@ $('#slider-btn-left').click(function () {
 function slideRight(sliderElements) {
     const lastChild = sliderElements.last();
     const slider = lastChild.parent();
-    const totalHorizontalMargin = GetTotalHorizontalMargin(lastChild);
+    const totalHorizontalMargin = getTotalHorizontalMargin(lastChild);
     let counter = 0;
     sliderElements.animate({ left: lastChild.width() + totalHorizontalMargin }, {
         complete: () => {
@@ -34,7 +34,7 @@ function slideLeft(sliderElements) {
     const firstChild = sliderElements.first();
     const otherChildren = sliderElements.slice(1);
     const slider = firstChild.parent();
-    const totalHorizontalMargin = GetTotalHorizontalMargin(firstChild);
+    const totalHorizontalMargin = getTotalHorizontalMargin(firstChild);
     let counter = 0;
     let widthSum = 0;
     sliderElements.each(function () {
@@ -59,6 +59,6 @@ function slideLeft(sliderElements) {
     });
 }
 
-function GetTotalHorizontalMargin(element) {
+function getTotalHorizontalMargin(element) {
     return parseInt(element.css('marginRight'), 10) + parseInt(element.css('marginLeft'), 10);
 }
