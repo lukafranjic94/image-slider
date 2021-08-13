@@ -3,10 +3,15 @@
 .slider-btn {
   align-items: center;
   border-radius: 5px;
-  border: 1px solid colors.$chatams_blue;
+  border: 1px solid colors.$alto;
+  cursor: pointer;
   display: flex;
   height: 60px;
   justify-content: center;
   margin-top: 10px;
   width: 60px;
+}
+
+.slider-btn:hover {
+  border-color: colors.$chatams_blue;
 }
