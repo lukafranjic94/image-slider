@@ -1,6 +1,7 @@
 $('#slider-btn-right').click(function () {
     const firstRow = $('#slider-row-first .slider-image');
     const secondRow = $('#slider-row-second .slider-image');
+
     slideRight(firstRow);
     slideRight(secondRow);
 });
@@ -8,6 +9,7 @@ $('#slider-btn-right').click(function () {
 $('#slider-btn-left').click(function () {
     const firstRow = $('#slider-row-first .slider-image');
     const secondRow = $('#slider-row-second .slider-image');
+
     slideLeft(firstRow);
     slideLeft(secondRow);
 });
@@ -16,17 +18,12 @@ function slideRight(sliderElements) {
     const lastChild = sliderElements.last();
     const slider = lastChild.parent();
     const totalHorizontalMargin = getTotalHorizontalMargin(lastChild);
-    let counter = 0;
-    sliderElements.animate({ left: lastChild.width() + totalHorizontalMargin }, {
-        complete: () => {
-            counter++;
-            if (counter === sliderElements.length) {
-                lastChild.prependTo(slider);
-                sliderElements.each(function () {
-                    $(this).removeAttr('style');
-                })
-            }
-        }
+
+    sliderElements.animate({ left: lastChild.width() + totalHorizontalMargin }).promise().then(() => {
+        lastChild.prependTo(slider);
+        sliderElements.each((i, elem) => {
+            $(elem).removeAttr('style');
+        })
     })
 }
 
@@ -35,28 +32,21 @@ function slideLeft(sliderElements) {
     const otherChildren = sliderElements.slice(1);
     const slider = firstChild.parent();
     const totalHorizontalMargin = getTotalHorizontalMargin(firstChild);
-    let counter = 0;
     let widthSum = 0;
-    sliderElements.each(function () {
-        widthSum += $(this).width();
+
+    sliderElements.each((i, elem) => {
+        widthSum += $(elem).width();
     });
     const totalLeft = widthSum + totalHorizontalMargin * sliderElements.length;
     firstChild.css({ left: totalLeft });
-    const animateElement = () => {
-        counter++;
-        if (counter === sliderElements.length) {
-            firstChild.appendTo(slider);
-            sliderElements.each(function () {
-                $(this).removeAttr('style');
-            })
-        }
-    }
-    firstChild.animate({ left: totalLeft - firstChild.width() - totalHorizontalMargin }, {
-        complete: animateElement
-    });
-    otherChildren.animate({ right: firstChild.width() + totalHorizontalMargin }, {
-        complete: animateElement
-    });
+    firstChild.animate({ left: totalLeft - firstChild.width() - totalHorizontalMargin });
+    otherChildren.animate({ right: firstChild.width() + totalHorizontalMargin });
+    sliderElements.promise().then(() => {
+        firstChild.appendTo(slider);
+        sliderElements.each((i, elem) => {
+            $(elem).removeAttr('style');
+        })
+    })
 }
 
 function getTotalHorizontalMargin(element) {
