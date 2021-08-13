@@ -5,7 +5,7 @@
 }
 
 .sample-element {
-  background-color: #DDDDDD;
+  background-color: #dddddd;
   height: 100px;
   display: flex;
   justify-content: center;
@@ -110,7 +110,7 @@
 
 .content {
   font-weight: 400;
-  color: #484A4C;
+  color: #484a4c;
   font-size: 18px;
 }
 
