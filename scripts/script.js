@@ -21,9 +21,7 @@ function slideRight(sliderElements) {
 
     sliderElements.animate({ left: lastChild.width() + totalHorizontalMargin }).promise().then(() => {
         lastChild.prependTo(slider);
-        sliderElements.each((i, elem) => {
-            $(elem).removeAttr('style');
-        });
+        sliderElements.removeAttr('style');
     });
 }
 
@@ -40,9 +38,7 @@ function slideLeft(sliderElements) {
     otherChildren.animate({ right: firstChild.width() + totalHorizontalMargin });
     sliderElements.promise().then(() => {
         firstChild.appendTo(slider);
-        sliderElements.each((i, elem) => {
-            $(elem).removeAttr('style');
-        });
+        sliderElements.removeAttr('style');
     });
 }
 
