@@ -23,8 +23,8 @@ function slideRight(sliderElements) {
         lastChild.prependTo(slider);
         sliderElements.each((i, elem) => {
             $(elem).removeAttr('style');
-        })
-    })
+        });
+    });
 }
 
 function slideLeft(sliderElements) {
@@ -42,8 +42,8 @@ function slideLeft(sliderElements) {
         firstChild.appendTo(slider);
         sliderElements.each((i, elem) => {
             $(elem).removeAttr('style');
-        })
-    })
+        });
+    });
 }
 
 function getTotalHorizontalMargin(element) {
