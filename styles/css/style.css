@@ -4,14 +4,6 @@
   font-family: "Source Sans Pro", sans-serif;
 }
 
-.sample-element {
-  background-color: #dddddd;
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 #sample-third {
   width: 100%;
   border-radius: 5px 5px 0px 0px;
@@ -40,9 +32,6 @@
 
 #slider-row-second {
   margin-top: 5px;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
 }
 
 .sample-elements {
@@ -62,12 +51,6 @@
   margin-left: 10px;
   border-radius: 0px 0px 5px 5px;
   margin-bottom: 30px;
-}
-
-#slider-row-first {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
 }
 
 .slider-image {
@@ -91,17 +74,6 @@
   padding-left: 50px;
 }
 
-.slider-btn {
-  margin-top: 10px;
-  width: 60px;
-  height: 60px;
-  border: 1px solid #134880;
-  border-radius: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .title {
   margin-top: 0;
   color: #134880;
@@ -113,6 +85,31 @@
   font-weight: 400;
   color: #484a4c;
   font-size: 18px;
+}
+
+.slider-btn {
+  margin-top: 10px;
+  width: 60px;
+  height: 60px;
+  border: 1px solid #134880;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.sample-element {
+  background-color: #dddddd;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */
