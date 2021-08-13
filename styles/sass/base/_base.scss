@@ -1,3 +1,5 @@
+@use '../abstract/colors';
+
 .wrapper {
     width: 50%;
     margin: 0 auto;
@@ -5,7 +7,7 @@
 }
 
 .sample-element {
-    background-color: #DDDDDD;
+    background-color: colors.$alto;
     height:100px;
     display:flex;
     justify-content: center;
@@ -29,7 +31,7 @@
 
 .description {
     min-width: 300px;
-    background-color: white;
+    background-color: colors.$white;
     padding-left:20px;
 }
 
@@ -86,14 +88,14 @@
 }
 
 .slider-btn-group {
-    background-color: white;
+    background-color: colors.$white;
     padding-left:50px;
 }
 
 .slider-btn {
     width:60px;
     height:60px;
-    border: 1px solid #134880;
+    border: 1px solid colors.$chatams_blue;
     border-radius: 5px;
     display:flex;
     justify-content: center;
@@ -102,13 +104,13 @@
 
 .title {
     margin-top:0;
-    color: #134880;
+    color: colors.$chatams_blue;
     font-weight: 700;
     font-size: 32px;
 }
 
 .content {
     font-weight: 400;
-    color: #484A4C;
+    color: colors.$abbey;
     font-size: 18px;
 }
