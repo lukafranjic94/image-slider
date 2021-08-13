@@ -32,12 +32,9 @@ function slideLeft(sliderElements) {
     const otherChildren = sliderElements.slice(1);
     const slider = firstChild.parent();
     const totalHorizontalMargin = getTotalHorizontalMargin(firstChild);
-    let widthSum = 0;
-
-    sliderElements.each((i, elem) => {
-        widthSum += $(elem).width();
-    });
+    const widthSum = sliderElements.map((i, elem) => $(elem).width()).toArray().reduce((accumulator, currentValue) => accumulator + currentValue);
     const totalLeft = widthSum + totalHorizontalMargin * sliderElements.length;
+
     firstChild.css({ left: totalLeft });
     firstChild.animate({ left: totalLeft - firstChild.width() - totalHorizontalMargin });
     otherChildren.animate({ right: firstChild.width() + totalHorizontalMargin });
