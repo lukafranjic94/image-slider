@@ -1,7 +1,9 @@
 @import "./abstract/colors";
 @import "./abstract/mixins";
+@import "./abstract/variables";
 
 @import "./base/base";
+@import "./base/typography";
 
 @import "./components/sample-element";
 @import "./components/slider-btn";

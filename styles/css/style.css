@@ -1,7 +1,5 @@
 .content {
   color: #484a4c;
-  font-size: 18px;
-  font-weight: 400;
 }
 
 .description {
@@ -51,13 +49,9 @@
 
 .title {
   color: #134880;
-  font-size: 32px;
-  font-weight: 700;
-  margin-top: 0;
 }
 
 .wrapper {
-  font-family: "Source Sans Pro", sans-serif;
   margin: 0 auto;
   width: 50%;
 }
@@ -93,12 +87,33 @@
   margin-top: 5px;
 }
 
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  letter-spacing: -0.2px;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 40px;
+  margin-top: 0;
+}
+
+p {
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 26px;
+}
+
 .sample-element {
   align-items: center;
   background-color: #dddddd;
+  color: #ffffff;
   display: flex;
+  font-size: 15px;
   height: 100px;
   justify-content: center;
+  line-height: 18px;
 }
 
 .slider-btn {

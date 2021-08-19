@@ -1,7 +1,10 @@
 .sample-element {
   align-items: center;
   background-color: $alto;
+  color: $white;
   display: flex;
+  font-size: $font-size-sample-text;
   height: 100px;
   justify-content: center;
+  line-height: $line-height-sample-text;
 }
