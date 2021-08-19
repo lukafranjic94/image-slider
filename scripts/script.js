@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).ready(() => {
 
     $('#slider-btn-right').on('click', () => {
         const firstRow = $('#slider-row-first .slider-image');
@@ -16,7 +16,7 @@ $(document).ready(function () {
         slideLeft(secondRow);
     });
 
-    function slideRight(sliderElements) {
+    const slideRight = (sliderElements) => {
         const lastChild = sliderElements.last();
         const slider = lastChild.parent();
         const totalHorizontalMargin = getTotalHorizontalMargin(lastChild);
@@ -27,9 +27,9 @@ $(document).ready(function () {
                 $(elem).removeAttr('style');
             });
         });
-    }
+    };
 
-    function slideLeft(sliderElements) {
+    const slideLeft = (sliderElements) => {
         const firstChild = sliderElements.first();
         const otherChildren = sliderElements.slice(1);
         const slider = firstChild.parent();
@@ -46,9 +46,9 @@ $(document).ready(function () {
                 $(elem).removeAttr('style');
             });
         });
-    }
+    };
 
-    function getTotalHorizontalMargin(element) {
+    const getTotalHorizontalMargin = (element) => {
         return parseInt(element.css('marginRight'), 10) + parseInt(element.css('marginLeft'), 10);
-    }
+    };
 });
