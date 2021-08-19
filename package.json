@@ -4,7 +4,7 @@
   "description": "A simple image slider.",
   "main": "index.js",
   "scripts": {
-    "build": "babel src -d scripts; sass styles/sass/main.scss styles/css/style.css",
+    "build": "babel src/scripts -d public/scripts; sass src/styles/sass/main.scss public/styles/css/style.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
