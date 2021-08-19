@@ -1,6 +1,6 @@
 $(document).ready(() => {
 
-    $('#slider-btn-right').on('click', (event) => {
+    $('#slider-btn-right').on('click', () => {
         const buttons = $('.slider-btn');
         buttons.prop('disabled', true);
         const firstRow = $('#slider-row-first .slider-image');
@@ -9,7 +9,7 @@ $(document).ready(() => {
         Promise.all([slideRight(firstRow), slideRight(secondRow)]).then(() => { buttons.prop('disabled', false); });
     });
 
-    $('#slider-btn-left').on('click', (event) => {
+    $('#slider-btn-left').on('click', () => {
         const buttons = $('.slider-btn');
         buttons.prop('disabled', true);
         const firstRow = $('#slider-row-first .slider-image');
