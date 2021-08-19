@@ -24,9 +24,7 @@ $(document).ready(() => {
 
         return sliderElements.animate({ left: lastChild.outerWidth(true) }).promise().then(() => {
             lastChild.prependTo(slider);
-            sliderElements.each((i, elem) => {
-                $(elem).removeAttr('style');
-            });
+            sliderElements.removeAttr('style');
         });
     };
 
@@ -41,9 +39,7 @@ $(document).ready(() => {
         otherChildren.animate({ right: firstChild.outerWidth(true) });
         return sliderElements.promise().then(() => {
             firstChild.appendTo(slider);
-            sliderElements.each((i, elem) => {
-                $(elem).removeAttr('style');
-            });
+            sliderElements.removeAttr('style');
         });
     };
 });
