@@ -4,7 +4,7 @@
   "description": "A simple image slider.",
   "main": "index.js",
   "scripts": {
-    "sass": "sass styles/sass/main.scss styles/css/style.css -w",
+    "build": "babel src -d scripts; sass styles/sass/main.scss styles/css/style.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,6 +18,9 @@
   },
   "homepage": "https://github.com/lukafranjic94/image-slider#readme",
   "devDependencies": {
+    "@babel/cli": "^7.14.8",
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
     "eslint": "^7.32.0",
     "sass": "^1.37.5"
   }
