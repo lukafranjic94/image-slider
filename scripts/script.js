@@ -1,26 +1,28 @@
 $(document).ready(() => {
 
-    $('#slider-btn-right').on('click', () => {
+    $('#slider-btn-right').on('click', (event) => {
+        const buttons = $('.slider-btn');
+        buttons.prop('disabled', true);
         const firstRow = $('#slider-row-first .slider-image');
         const secondRow = $('#slider-row-second .slider-image');
 
-        slideRight(firstRow);
-        slideRight(secondRow);
+        Promise.all([slideRight(firstRow), slideRight(secondRow)]).then(() => { buttons.prop('disabled', false); });
     });
 
-    $('#slider-btn-left').on('click', () => {
+    $('#slider-btn-left').on('click', (event) => {
+        const buttons = $('.slider-btn');
+        buttons.prop('disabled', true);
         const firstRow = $('#slider-row-first .slider-image');
         const secondRow = $('#slider-row-second .slider-image');
 
-        slideLeft(firstRow);
-        slideLeft(secondRow);
+        Promise.all([slideLeft(firstRow), slideLeft(secondRow)]).then(() => { buttons.prop('disabled', false); });
     });
 
     const slideRight = (sliderElements) => {
         const lastChild = sliderElements.last();
         const slider = lastChild.parent();
 
-        sliderElements.animate({ left: lastChild.outerWidth(true) }).promise().then(() => {
+        return sliderElements.animate({ left: lastChild.outerWidth(true) }).promise().then(() => {
             lastChild.prependTo(slider);
             sliderElements.each((i, elem) => {
                 $(elem).removeAttr('style');
@@ -37,7 +39,7 @@ $(document).ready(() => {
         firstChild.css({ left: totalLeft });
         firstChild.animate({ left: totalLeft - firstChild.outerWidth(true) });
         otherChildren.animate({ right: firstChild.outerWidth(true) });
-        sliderElements.promise().then(() => {
+        return sliderElements.promise().then(() => {
             firstChild.appendTo(slider);
             sliderElements.each((i, elem) => {
                 $(elem).removeAttr('style');
