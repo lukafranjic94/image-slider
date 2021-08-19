@@ -1,5 +1,6 @@
 $(document).ready(function () {
-    $('#slider-btn-right').click(function () {
+
+    $('#slider-btn-right').on('click', () => {
         const firstRow = $('#slider-row-first .slider-image');
         const secondRow = $('#slider-row-second .slider-image');
 
@@ -7,7 +8,7 @@ $(document).ready(function () {
         slideRight(secondRow);
     });
 
-    $('#slider-btn-left').click(function () {
+    $('#slider-btn-left').on('click', () => {
         const firstRow = $('#slider-row-first .slider-image');
         const secondRow = $('#slider-row-second .slider-image');
 
