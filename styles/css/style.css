@@ -37,6 +37,12 @@
   z-index: -1;
 }
 
+.slider-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
 .slider-row-second-container {
   display: flex;
   flex-direction: row;
@@ -119,12 +125,6 @@
 }
 .slider-btn:hover img:first-child {
   display: none;
-}
-
-.slider-row {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
 }
 
 /*# sourceMappingURL=style.css.map */

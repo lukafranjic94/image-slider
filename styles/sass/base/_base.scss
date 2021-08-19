@@ -38,6 +38,10 @@
   z-index: -1;
 }
 
+.slider-row {
+  @include slider-row;
+}
+
 .slider-row-second-container {
   display: flex;
   flex-direction: row;
