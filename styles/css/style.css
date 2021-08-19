@@ -79,22 +79,6 @@
   padding-right: 5px;
 }
 
-#slider-btn-left {
-  background: url("/assets/images/arrow-gray-left.png") no-repeat center;
-}
-
-#slider-btn-left:hover {
-  background: url("/assets/images/arrow-blue-left.png") no-repeat center;
-}
-
-#slider-btn-right {
-  background: url("/assets/images/arrow-gray-right.png") no-repeat center;
-}
-
-#slider-btn-right:hover {
-  background: url("/assets/images/arrow-blue-right.png") no-repeat center;
-}
-
 #slider-row-first {
   margin-bottom: 5px;
 }
@@ -115,6 +99,7 @@
   align-items: center;
   border-radius: 5px;
   border: 1px solid #dddddd;
+  background-color: #ffffff;
   cursor: pointer;
   display: flex;
   height: 60px;
@@ -122,9 +107,18 @@
   margin-top: 10px;
   width: 60px;
 }
+.slider-btn img:last-child {
+  display: none;
+}
 
 .slider-btn:hover {
   border-color: #134880;
+}
+.slider-btn:hover img:last-child {
+  display: block;
+}
+.slider-btn:hover img:first-child {
+  display: none;
 }
 
 .slider-row {

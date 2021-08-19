@@ -4,14 +4,24 @@
   align-items: center;
   border-radius: 5px;
   border: 1px solid colors.$alto;
+  background-color: colors.$white;
   cursor: pointer;
   display: flex;
   height: 60px;
   justify-content: center;
   margin-top: 10px;
   width: 60px;
+  img:last-child {
+    display: none;
+  }
 }
 
 .slider-btn:hover {
   border-color: colors.$chatams_blue;
+  img:last-child {
+    display: block;
+  }
+  img:first-child {
+    display: none;
+  }
 }
