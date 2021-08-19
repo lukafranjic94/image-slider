@@ -1,8 +1,6 @@
-@use "../abstract/colors";
-
 .sample-element {
   align-items: center;
-  background-color: colors.$alto;
+  background-color: $alto;
   display: flex;
   height: 100px;
   justify-content: center;

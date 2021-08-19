@@ -1,10 +1,8 @@
-@use '../abstract/colors';
-
 .slider-btn {
   align-items: center;
   border-radius: 5px;
-  border: 1px solid colors.$alto;
-  background-color: colors.$white;
+  border: 1px solid $alto;
+  background-color: $white;
   cursor: pointer;
   display: flex;
   height: 60px;
@@ -17,7 +15,7 @@
 }
 
 .slider-btn:hover {
-  border-color: colors.$chatams_blue;
+  border-color: $chatams_blue;
   img:last-child {
     display: block;
   }

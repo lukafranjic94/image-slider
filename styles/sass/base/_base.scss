@@ -1,12 +1,10 @@
-@use '../abstract/colors';
-
 .content {
-  color: colors.$abbey;
+  color: $abbey;
   font-size: 18px;
   font-weight: 400;
 }
 .description {
-  background-color: colors.$white;
+  background-color: $white;
   min-width: 300px;
   padding-left: 20px;
 }
@@ -25,7 +23,7 @@
 }
 
 .slider-btn-group {
-  background-color: colors.$white;
+  background-color: $white;
   padding-left: 50px;
 }
 
@@ -49,7 +47,7 @@
 }
 
 .title {
-  color: colors.$chatams_blue;
+  color: $chatams_blue;
   font-size: 32px;
   font-weight: 700;
   margin-top: 0;
